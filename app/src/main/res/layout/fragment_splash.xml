@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink"
+    android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+    tools:context=".view.SplashFragment">
+
+    <ImageView
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="32dp"
+        android:tint="@color/white"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_ioasys"/>
+
+
+</FrameLayout>
