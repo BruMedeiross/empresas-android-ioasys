@@ -13,9 +13,6 @@
         android:theme="@style/Theme.Empresasandroidioasys"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".DetailCompany"
-            android:exported="false" />
-        <activity
             android:name=".view.MainActivity"
             android:exported="true">
             <intent-filter>
