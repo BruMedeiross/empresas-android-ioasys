@@ -1,10 +1,8 @@
 package com.brunadev.empresas_android_ioasys.view
 
-import android.content.Context
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toolbar
 import com.brunadev.empresas_android_ioasys.R
 import com.brunadev.empresas_android_ioasys.mydata.model.Company
 import com.squareup.picasso.Picasso

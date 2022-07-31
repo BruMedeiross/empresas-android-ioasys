@@ -13,8 +13,6 @@ import com.brunadev.empresas_android_ioasys.R
 import com.brunadev.empresas_android_ioasys.databinding.FragmentLoginBinding
 import com.brunadev.empresas_android_ioasys.presenter.LoginPresenter
 import kotlinx.android.synthetic.main.fragment_login.*
-import okio.utf8Size
-
 
 class LoginFragment : Fragment() {
 
@@ -36,6 +34,7 @@ class LoginFragment : Fragment() {
 
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

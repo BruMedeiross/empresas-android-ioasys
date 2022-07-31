@@ -8,18 +8,14 @@ import android.widget.*
 import androidx.appcompat.app.ActionBar
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.brunadev.empresas_android_ioasys.R
 import com.brunadev.empresas_android_ioasys.databinding.FragmentHomeBinding
 import com.brunadev.empresas_android_ioasys.mydata.model.Company
 import com.brunadev.empresas_android_ioasys.presenter.HomePresenter
 import com.xwray.groupie.GroupieAdapter
-import kotlinx.android.synthetic.main.fragment_detail_company.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.progressBar
-import kotlinx.android.synthetic.main.item_company.*
-
 
 class HomeFragment : Fragment() {
 
