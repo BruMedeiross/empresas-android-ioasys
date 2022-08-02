@@ -1,6 +1,8 @@
 package com.brunadev.empresas_android_ioasys.view
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -80,8 +82,8 @@ class HomeFragment : Fragment() {
         btn_search.setOnClickListener {
             iv_logo_home.visibility = View.GONE
             edit_search.visibility = View.VISIBLE
-            btn_close.visibility = View.VISIBLE
-            btn_search.visibility = View.GONE
+            btn_close.visibility = View.GONE
+            btn_search.visibility = View.VISIBLE
             val layoutParams = edit_search.layoutParams
             layoutParams.width = ActionBar.LayoutParams.MATCH_PARENT
 
@@ -90,15 +92,15 @@ class HomeFragment : Fragment() {
             if(search.isNotEmpty()) {
                 showProgress()
                 btn_close.visibility = View.VISIBLE
+                btn_search.visibility = View.GONE
             }
 
-            if(search.isNullOrEmpty()) {
+            Handler(Looper.getMainLooper()).postDelayed({
                 hideProgress()
-                btn_search.visibility = View.VISIBLE
                 btn_close.visibility = View.GONE
-            }
+                btn_search.visibility = View.VISIBLE
+            }, 2000)
 
-            adapter.notifyDataSetChanged()
         }
 
         btn_close.setOnClickListener {
