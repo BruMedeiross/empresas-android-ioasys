@@ -99,6 +99,7 @@ class HomeFragment : Fragment() {
                 hideProgress()
                 btn_close.visibility = View.GONE
                 btn_search.visibility = View.VISIBLE
+                Toast.makeText(requireContext(), "Busca por $search: não localizado", Toast.LENGTH_SHORT).show()
             }, 2000)
 
         }
