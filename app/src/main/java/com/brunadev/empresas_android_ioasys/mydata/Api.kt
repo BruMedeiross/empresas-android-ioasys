@@ -16,7 +16,6 @@ interface Api {
     ): Call<LoginResponse>
 
    @GET("enterprises")
-
     fun findCompanies(
        @Header("uid") uid: String?,
        @Header("client") client: String?,
