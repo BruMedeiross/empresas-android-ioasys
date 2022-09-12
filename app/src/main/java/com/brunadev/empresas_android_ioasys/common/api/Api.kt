@@ -1,6 +1,6 @@
-package com.brunadev.empresas_android_ioasys.mydata
+package com.brunadev.empresas_android_ioasys.common.api
 
-import com.brunadev.empresas_android_ioasys.mydata.model.CompanyList
+import com.brunadev.empresas_android_ioasys.common.model.CompanyList
 import com.brunadev.empresas_android_ioasys.login.data.LoginResponse
 import retrofit2.Call
 import retrofit2.http.*

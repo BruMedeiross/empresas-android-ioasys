@@ -1,6 +1,6 @@
 package com.brunadev.empresas_android_ioasys.home.data
 
-import com.brunadev.empresas_android_ioasys.mydata.model.CompanyList
+import com.brunadev.empresas_android_ioasys.common.model.CompanyList
 
 interface CompanyCallBack {
 
