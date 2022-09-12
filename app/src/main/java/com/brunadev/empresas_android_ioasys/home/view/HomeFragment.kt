@@ -1,11 +1,13 @@
 package com.brunadev.empresas_android_ioasys.home.view
 
+import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import androidx.appcompat.app.ActionBar
 import androidx.fragment.app.Fragment
@@ -18,6 +20,7 @@ import com.brunadev.empresas_android_ioasys.home.presenter.HomePresenter
 import com.xwray.groupie.GroupieAdapter
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.progressBar
+import kotlinx.android.synthetic.main.fragment_login.*
 
 class HomeFragment : Fragment() {
 
@@ -80,6 +83,7 @@ class HomeFragment : Fragment() {
     private fun setupToolbar() {
 
         btn_search.setOnClickListener {
+            it.hideKeyboard()
             iv_logo_home.visibility = View.GONE
             edit_search.visibility = View.VISIBLE
             btn_close.visibility = View.GONE
@@ -102,7 +106,7 @@ class HomeFragment : Fragment() {
                 if(search.isNotEmpty()) {
                     Toast.makeText(requireContext(), "Busca por $search não localizado", Toast.LENGTH_SHORT).show()
                 }
-            }, 2000)
+            }, 1000)
 
         }
 
@@ -114,6 +118,11 @@ class HomeFragment : Fragment() {
             btn_close.visibility = View.GONE
             hideProgress()
         }
+    }
+
+    fun View.hideKeyboard() {
+        val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(edit_search.windowToken, 0)
     }
 
     fun showCompanies(response: List<Company>) {

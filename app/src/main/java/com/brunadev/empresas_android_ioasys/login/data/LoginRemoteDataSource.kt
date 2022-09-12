@@ -1,7 +1,6 @@
 package com.brunadev.empresas_android_ioasys.login.data
 
 import com.brunadev.empresas_android_ioasys.data.api.api.HTTPClient
-import com.brunadev.empresas_android_ioasys.mydata.model.LoginResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

@@ -1,4 +1,4 @@
-package com.brunadev.empresas_android_ioasys.mydata.model
+package com.brunadev.empresas_android_ioasys.login.data
 
 data class LoginResponse (
 

@@ -1,7 +1,6 @@
 package com.brunadev.empresas_android_ioasys.data.api.api
 
 import android.util.Base64
-import com.brunadev.empresas_android_ioasys.mydata.model.SessionHeader
 import com.brunadev.empresas_android_ioasys.mydata.Api
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

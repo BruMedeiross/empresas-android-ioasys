@@ -1,4 +1,4 @@
-package com.brunadev.empresas_android_ioasys.view
+package com.brunadev.empresas_android_ioasys.splash.view
 
 import android.os.Bundle
 import android.os.Handler

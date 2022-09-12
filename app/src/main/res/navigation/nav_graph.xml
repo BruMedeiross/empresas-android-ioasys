@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.brunadev.empresas_android_ioasys.view.SplashFragment"
+        android:name="com.brunadev.empresas_android_ioasys.splash.view.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" />
     <fragment

@@ -1,4 +1,4 @@
-package com.brunadev.empresas_android_ioasys.view
+package com.brunadev.empresas_android_ioasys.main.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
