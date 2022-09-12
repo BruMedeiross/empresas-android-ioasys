@@ -1,14 +1,14 @@
-package com.brunadev.empresas_android_ioasys.presenter
+package com.brunadev.empresas_android_ioasys.home.presenter
 
 import com.brunadev.empresas_android_ioasys.mydata.model.CompanyList
-import com.brunadev.empresas_android_ioasys.mydata.CompanyCallBack
-import com.brunadev.empresas_android_ioasys.mydata.CompanyRemoteDataSource
-import com.brunadev.empresas_android_ioasys.view.HomeFragment
+import com.brunadev.empresas_android_ioasys.home.data.CompanyCallBack
+import com.brunadev.empresas_android_ioasys.home.data.CompanyRemoteDataSource
+import com.brunadev.empresas_android_ioasys.home.view.HomeFragment
 
 class HomePresenter (
     private val view: HomeFragment,
     private val dataSource: CompanyRemoteDataSource = CompanyRemoteDataSource()
-) : CompanyCallBack{
+) : CompanyCallBack {
 
     fun findAllCompanies(email: String, password: String) {
        view.showProgress()

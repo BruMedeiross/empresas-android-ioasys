@@ -1,4 +1,4 @@
-package com.brunadev.empresas_android_ioasys.view
+package com.brunadev.empresas_android_ioasys.home.view
 
 import android.view.View
 import android.widget.ImageView

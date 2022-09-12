@@ -1,4 +1,4 @@
-package com.brunadev.empresas_android_ioasys.view
+package com.brunadev.empresas_android_ioasys.login.view
 
 import android.content.Context
 import android.os.Bundle
@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.brunadev.empresas_android_ioasys.R
 import com.brunadev.empresas_android_ioasys.databinding.FragmentLoginBinding
-import com.brunadev.empresas_android_ioasys.presenter.LoginPresenter
+import com.brunadev.empresas_android_ioasys.login.presenter.LoginPresenter
 import kotlinx.android.synthetic.main.fragment_login.*
 
 class LoginFragment : Fragment() {
@@ -46,11 +46,10 @@ class LoginFragment : Fragment() {
 
         btnLogin.setOnClickListener {
             it.hideKeyboard()
-            if (validate()) {
-                var email = emailText.text.toString().trim()
-                var password = passwordText.text.toString().trim()
-                presenter.doLogin(email, password)
-            }
+            var email = emailText.text.toString().trim()
+            var password = passwordText.text.toString().trim()
+            presenter.doLogin(email, password)
+
         }
 
     }

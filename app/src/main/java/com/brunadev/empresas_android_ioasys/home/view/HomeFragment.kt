@@ -1,4 +1,4 @@
-package com.brunadev.empresas_android_ioasys.view
+package com.brunadev.empresas_android_ioasys.home.view
 
 import android.os.Bundle
 import android.os.Handler
@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.brunadev.empresas_android_ioasys.R
 import com.brunadev.empresas_android_ioasys.databinding.FragmentHomeBinding
 import com.brunadev.empresas_android_ioasys.mydata.model.Company
-import com.brunadev.empresas_android_ioasys.presenter.HomePresenter
+import com.brunadev.empresas_android_ioasys.home.presenter.HomePresenter
 import com.xwray.groupie.GroupieAdapter
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.progressBar
@@ -99,7 +99,9 @@ class HomeFragment : Fragment() {
                 hideProgress()
                 btn_close.visibility = View.GONE
                 btn_search.visibility = View.VISIBLE
-                Toast.makeText(requireContext(), "Busca por $search: não localizado", Toast.LENGTH_SHORT).show()
+                if(search.isNotEmpty()) {
+                    Toast.makeText(requireContext(), "Busca por $search não localizado", Toast.LENGTH_SHORT).show()
+                }
             }, 2000)
 
         }

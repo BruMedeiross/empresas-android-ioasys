@@ -1,4 +1,4 @@
-package com.brunadev.empresas_android_ioasys.mydata
+package com.brunadev.empresas_android_ioasys.login.data
 
 interface LoginCallback {
 

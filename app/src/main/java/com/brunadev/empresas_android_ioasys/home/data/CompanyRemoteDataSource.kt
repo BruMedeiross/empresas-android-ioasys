@@ -1,9 +1,9 @@
-package com.brunadev.empresas_android_ioasys.mydata
+package com.brunadev.empresas_android_ioasys.home.data
 
 import com.brunadev.empresas_android_ioasys.data.api.api.HTTPClient
 import com.brunadev.empresas_android_ioasys.mydata.model.CompanyList
 import com.brunadev.empresas_android_ioasys.mydata.model.LoginResponse
-import com.brunadev.empresas_android_ioasys.presenter.HomePresenter
+import com.brunadev.empresas_android_ioasys.home.presenter.HomePresenter
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

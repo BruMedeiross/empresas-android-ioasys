@@ -1,4 +1,4 @@
-package com.brunadev.empresas_android_ioasys.mydata
+package com.brunadev.empresas_android_ioasys.home.data
 
 import com.brunadev.empresas_android_ioasys.mydata.model.CompanyList
 
