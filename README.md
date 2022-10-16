@@ -4,11 +4,11 @@ Estes documento README tem como objetivo fornecer as informaÃ§Ãµes necessÃ�
 
 ### O QUE FAZER ? ###
 
-* Você deve realizar um fork deste repositório e, ao finalizar, enviar o link do seu repositório para a nossa equipe. Lembre-se, NÃƒO Ã© necessÃ¡rio criar um Pull Request para isso.
+* Você deve realizar um fork deste repositório e, ao finalizar, enviar o link do seu repositório para a nossa equipe. Lembre-se, não é necessário o criar um Pull Request para isso.
 
 ### ESCOPO DO PROJETO ###
 
-* Deve ser criado um aplicativo Android utilizando linguagem Java ou Kotlin com as seguintes especificaÃ§Ãµes:
+* Deve ser criado um aplicativo Android utilizando linguagem Java ou Kotlin com as seguintes especificações:
 * Login e acesso de UsuÃ¡rio jÃ¡ registrado
 	* Para o login usamos padrÃµes OAuth 2.0. Na resposta de sucesso do login a api retornarÃ¡ 3 custom headers (access-token, client, uid);
 	* Para ter acesso as demais APIS precisamos enviar esses 3 custom headers para a API autorizar a requisiÃ§Ã£o;
@@ -24,7 +24,7 @@ Senha - ioasys123
 * Integração disponivel a partir de uma collection para Postman (https://www.getpostman.com/apps) disponivel neste repositório.
 * O `README.md` deve conter uma pequena justificativa de cada biblioteca adicionada ao projeto como dependência.
 * O `README.md` deve conter tambem o que vocÃª faria se tivesse mais tempo.
-* O `README.md` do projeto deve conter instruÃ§Ãµes de como executar a aplicaÃ§Ã£o
+* O `README.md` do projeto deve conter instruÃ§Ãµes de como executar a aplicação
 * Independente de onde conseguiu chegar no teste Ã© importante disponibilizar seu fonte para analisarmos.
 
 ### Dados para Teste ###
