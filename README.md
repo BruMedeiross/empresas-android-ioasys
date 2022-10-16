@@ -1,6 +1,6 @@
 # README #
 
-Estes documento README tem como objetivo fornecer as informaÃ§Ãµes necessÃ¡rias para realização do projeto Empresas.
+Estes documento README tem como objetivo fornecer as informações necessárias para realização do projeto Empresas.
 
 ### O QUE FAZER ? ###
 
