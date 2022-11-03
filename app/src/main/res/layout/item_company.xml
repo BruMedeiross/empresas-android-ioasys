@@ -61,7 +61,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:textColor="@color/txt_style"
-            android:text="Cidade: SP"
+            android:text="SP"
             app:layout_constraintStart_toEndOf="@+id/img_company"
             app:layout_constraintTop_toBottomOf="@id/type_company"
             />

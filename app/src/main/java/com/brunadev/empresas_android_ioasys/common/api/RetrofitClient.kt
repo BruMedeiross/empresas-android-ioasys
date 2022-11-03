@@ -6,7 +6,7 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object HTTPClient {
+object HTTPClient{
 
     private const val BASE_URL= "https://empresas.ioasys.com.br/api/v1/"
 

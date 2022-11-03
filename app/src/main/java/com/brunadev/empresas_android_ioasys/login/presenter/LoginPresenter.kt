@@ -14,8 +14,8 @@ class LoginPresenter(
         dataSource.doLoginRequest(email, password, this)
     }
 
-    override fun onSuccess(response: String) {
-        view.goToNextScreen()
+    override fun onSuccess(uid: String, client: String, accessToken :String) {
+        view.goToNextScreen(uid, client, accessToken)
     }
 
 

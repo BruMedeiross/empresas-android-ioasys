@@ -21,7 +21,11 @@ class LoginRemoteDataSource {
                     response: Response<LoginResponse>
                 ) {
                     if (response.isSuccessful) {
-                        callback.onSuccess(response.message())
+                        val uid = response.headers()["uid"].orEmpty()
+                        val client = response.headers()["client"].orEmpty()
+                        val accessToken = response.headers()["access-token"].orEmpty()
+
+                        callback.onSuccess(uid, client, accessToken)
                         callback.onComplete()
                     } else {
                         callback.onError("Login ou senha inválidos")
