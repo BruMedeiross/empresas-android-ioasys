@@ -28,6 +28,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private lateinit var uid: String
     private lateinit var client: String
     private lateinit var accessToken: String
+    private var newText: String? = null
 
     private lateinit var presenter: HomePresenter
     private val adapter = GroupieAdapter()
@@ -66,7 +67,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         rvlist.adapter = adapter
 
         if (adapter.itemCount == 0) {
-            presenter.findAllCompanies(uid, client, accessToken)
+            presenter.findCompanies(uid, client, accessToken, newText = null)
         }
 
         adapter.setOnItemClickListener { item, _ ->
@@ -109,9 +110,14 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 }
 
                 override fun onQueryTextChange(newText: String?): Boolean {
-                    if (newText?.isNotEmpty() == true) {
+                    newText?.let {
                         adapter.clear()
                         presenter.searchCompanies(uid, client, accessToken, newText)
+                        hideKeyboard(searchView)
+                        return true
+                    } ?: run {
+                        adapter.clear()
+                        presenter.findCompanies(uid, client, accessToken, newText = null)
                         hideKeyboard(searchView)
                         return true
                     }

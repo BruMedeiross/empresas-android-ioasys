@@ -6,19 +6,19 @@ import com.brunadev.empresas_android_ioasys.home.data.CompanyCallBack
 import com.brunadev.empresas_android_ioasys.home.data.CompanyRemoteDataSource
 import com.brunadev.empresas_android_ioasys.home.view.HomeFragment
 
-class HomePresenter (
+class HomePresenter(
     private val view: HomeFragment,
     private val dataSource: CompanyRemoteDataSource = CompanyRemoteDataSource()
 ) : CompanyCallBack {
 
-    fun findAllCompanies(uid: String, client: String, accessToken: String) {
-       view.showProgress()
-       dataSource.listCompanies(uid, client, accessToken, this)
+    fun findCompanies(uid: String, client: String, accessToken: String, newText: String?) {
+        view.showProgress()
+        dataSource.listCompanies(uid, client, accessToken, newText, this)
     }
 
-    fun searchCompanies(uid: String, client: String, accessToken: String, newText: String) {
+    fun searchCompanies(uid: String, client: String, accessToken: String, newText: String?) {
         view.showSearchProgress()
-        dataSource.findCompanies(uid, client,accessToken,newText, this)
+        dataSource.listCompanies(uid, client, accessToken, newText, this)
     }
 
     override fun onSuccess(response: CompanyList?) {
