@@ -30,7 +30,7 @@ class CompanyRemoteDataSource {
                 ) = if (response.isSuccessful) {
                     newText?.let {
                         filter(response, newText, callback)
-                    }?: run {
+                    } ?: run {
                         callback.onSuccess(response.body())
                         callback.onComplete()
                     }
