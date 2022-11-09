@@ -6,6 +6,4 @@ class CompanyList (
 
     @SerializedName("enterprises") val enterprises: List<Company> = emptyList()
 
-) {
-
-}
+)
