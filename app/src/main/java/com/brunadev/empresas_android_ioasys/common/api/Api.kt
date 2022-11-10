@@ -15,7 +15,6 @@ interface Api {
         @Field("password") password: String
     ): Call<LoginResponse>
 
-
    @GET("enterprises")
     fun findCompanies(
        @Header("uid") uid: String?,
