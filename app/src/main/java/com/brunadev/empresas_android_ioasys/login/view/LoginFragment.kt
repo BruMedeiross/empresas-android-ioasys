@@ -53,7 +53,7 @@ class LoginFragment : Fragment() {
 
         btnLogin.setOnClickListener {
             if(validate()) {
-                it.hideKeyboard().toString()
+                it.hideKeyboard()
 
                 var email = emailText.text.toString().trim()
                 var password = passwordText.text.toString().trim()
