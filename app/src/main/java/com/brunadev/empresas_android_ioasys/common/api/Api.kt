@@ -8,15 +8,19 @@ import retrofit2.http.*
 
 interface Api {
 
+    //Dados codificados em formulário são enviados quando @FormUrlEncodedestão presentes no método.
     @FormUrlEncoded
     @POST("users/auth/sign_in")
     fun userLogin(
+        //Cada par chave-valor é anotado @Field contendo o nome e o objeto que fornece o valor.
         @Field("email") email: String,
         @Field("password") password: String
     ): Call<LoginResponse>
 
    @GET("enterprises")
+   // método de solicitação GET e a URL relativa "ENTERPRISES"
     fun findCompanies(
+       // cabeçalhos estáticos para um método usando a @Headers
        @Header("uid") uid: String?,
        @Header("client") client: String?,
        @Header("access-token") accessToken: String?

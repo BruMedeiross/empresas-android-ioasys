@@ -26,13 +26,13 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private val binding get() = _binding!!
 
     private lateinit var uid: String
-    private lateinit var client: String
-    private lateinit var accessToken: String
-    private var newText: String? = null
 
     private lateinit var presenter: HomePresenter
     private val adapter = GroupieAdapter()
 
+    private lateinit var client: String
+    private lateinit var accessToken: String
+    private var newText: String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
