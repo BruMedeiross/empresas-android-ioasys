@@ -10,13 +10,13 @@ object HTTPClient{
 
     private const val BASE_URL= "https://empresas.ioasys.com.br/api/v1/"
 
-    private val AUTH = "Basic "+ Base64.encodeToString("testeapple@ioasys.com.br: 12341234".toByteArray(),Base64.NO_WRAP)
+  //  private val AUTH = "Basic "+ Base64.encodeToString("testeapple@ioasys.com.br: 12341234".toByteArray(),Base64.NO_WRAP)
 
     private val okHttpClient = OkHttpClient.Builder().addInterceptor { chain->
         val original = chain.request()
 
         val requestBuilder = original.newBuilder()
-            .addHeader("Authorization", AUTH)
+     //       .addHeader("Authorization", AUTH)
             .method(original.method, original.body)
 
         val request = requestBuilder.build()

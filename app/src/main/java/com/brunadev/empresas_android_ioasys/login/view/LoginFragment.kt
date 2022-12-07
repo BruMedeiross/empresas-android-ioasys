@@ -50,9 +50,11 @@ class LoginFragment : Fragment() {
 
     private fun setListeners() {
 
+
         btnLogin.setOnClickListener {
             if(validate()) {
                 it.hideKeyboard()
+
                 var email = emailText.text.toString().trim()
                 var password = passwordText.text.toString().trim()
                 presenter.doLogin(email, password)
