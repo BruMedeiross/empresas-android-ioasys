@@ -1,10 +1,10 @@
-package com.brunadev.empresas_android_ioasys.view
+package com.brunadev.empresas_android_ioasys.home.view
 
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import com.brunadev.empresas_android_ioasys.R
-import com.brunadev.empresas_android_ioasys.mydata.model.Company
+import com.brunadev.empresas_android_ioasys.common.model.Company
 import com.squareup.picasso.Picasso
 import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.Item

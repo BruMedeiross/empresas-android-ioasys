@@ -1,4 +1,4 @@
-package com.brunadev.empresas_android_ioasys.mydata.model
+package com.brunadev.empresas_android_ioasys.common.model
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName

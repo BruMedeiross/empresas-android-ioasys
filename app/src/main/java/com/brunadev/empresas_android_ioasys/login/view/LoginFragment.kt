@@ -1,4 +1,4 @@
-package com.brunadev.empresas_android_ioasys.view
+package com.brunadev.empresas_android_ioasys.login.view
 
 import android.content.Context
 import android.os.Bundle
@@ -7,11 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.brunadev.empresas_android_ioasys.R
 import com.brunadev.empresas_android_ioasys.databinding.FragmentLoginBinding
-import com.brunadev.empresas_android_ioasys.presenter.LoginPresenter
+import com.brunadev.empresas_android_ioasys.login.presenter.LoginPresenter
 import kotlinx.android.synthetic.main.fragment_login.*
 
 class LoginFragment : Fragment() {
@@ -30,7 +32,11 @@ class LoginFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): ConstraintLayout {
+        // set status bar color.
+        activity?.window?.statusBarColor =
+            ContextCompat.getColor(context as Context, R.color.beige)
+
 
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
@@ -45,8 +51,8 @@ class LoginFragment : Fragment() {
     private fun setListeners() {
 
         btnLogin.setOnClickListener {
-            it.hideKeyboard()
-            if (validate()) {
+            if(validate()) {
+                it.hideKeyboard()
                 var email = emailText.text.toString().trim()
                 var password = passwordText.text.toString().trim()
                 presenter.doLogin(email, password)
@@ -108,14 +114,14 @@ class LoginFragment : Fragment() {
         super.onStart()
     }
 
-    fun goToNextScreen() {
+    fun goToNextScreen(uid: String, client: String, accessToken: String) {
         val bundle = Bundle()
-        val email = emailText.text.toString().trim()
-        val pass = passwordText.text.toString().trim()
-        bundle.putString("email", email)
-        bundle.putString("password", pass)
+        bundle.putString("uid", uid)
+        bundle.putString("client", client)
+        bundle.putString("accessToken", accessToken)
 
         findNavController().navigate(R.id.action_loginFragment_to_homeFragment, bundle)
     }
+
 
 }

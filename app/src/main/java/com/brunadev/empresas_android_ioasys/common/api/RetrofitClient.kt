@@ -1,13 +1,12 @@
 package com.brunadev.empresas_android_ioasys.data.api.api
 
 import android.util.Base64
-import com.brunadev.empresas_android_ioasys.mydata.model.SessionHeader
-import com.brunadev.empresas_android_ioasys.mydata.Api
+import com.brunadev.empresas_android_ioasys.common.api.Api
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object HTTPClient {
+object HTTPClient{
 
     private const val BASE_URL= "https://empresas.ioasys.com.br/api/v1/"
 

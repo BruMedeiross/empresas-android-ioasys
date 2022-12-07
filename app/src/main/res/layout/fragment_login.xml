@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:background="@color/beige"
     android:id="@+id/snackbar_action"
-    tools:context=".view.LoginFragment">
+    tools:context=".login.view.LoginFragment">
 
         <ImageView
             android:id="@+id/imCompany"

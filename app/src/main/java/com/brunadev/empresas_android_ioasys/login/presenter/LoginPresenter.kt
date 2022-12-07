@@ -1,8 +1,8 @@
-package com.brunadev.empresas_android_ioasys.presenter
+package com.brunadev.empresas_android_ioasys.login.presenter
 
-import com.brunadev.empresas_android_ioasys.mydata.LoginCallback
-import com.brunadev.empresas_android_ioasys.mydata.LoginRemoteDataSource
-import com.brunadev.empresas_android_ioasys.view.LoginFragment
+import com.brunadev.empresas_android_ioasys.login.data.LoginCallback
+import com.brunadev.empresas_android_ioasys.login.data.LoginRemoteDataSource
+import com.brunadev.empresas_android_ioasys.login.view.LoginFragment
 
 class LoginPresenter(
     private val view: LoginFragment,
@@ -14,8 +14,8 @@ class LoginPresenter(
         dataSource.doLoginRequest(email, password, this)
     }
 
-    override fun onSuccess(response: String) {
-        view.goToNextScreen()
+    override fun onSuccess(uid: String, client: String, accessToken :String) {
+        view.goToNextScreen(uid, client, accessToken)
     }
 
 
